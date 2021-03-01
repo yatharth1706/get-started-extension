@@ -10,15 +10,20 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:get-started.helloWorld"
+        "onCommand:get-started.helloWorld",
+		"onCommand:get-started.showWarning"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [{
             "command": "get-started.helloWorld",
             "title": "Hello World"
-
-		}]
+		},
+		{
+			"command": "get-started.showWarning",
+            "title": "Show Warning"
+		}
+	]
 	},
 	"scripts": {
 		"lint": "eslint .",

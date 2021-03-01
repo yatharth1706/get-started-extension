@@ -24,7 +24,11 @@ function activate(context) {
 		vscode.window.showInformationMessage('Hello World from Get-Started!');
 	});
 
-	context.subscriptions.push(disposable);
+	let warning = vscode.commands.registerCommand('get-started.showWarning', function(){
+		vscode.window.showWarningMessage("Current time is invalid!")
+	})
+
+	context.subscriptions.push(disposable, warning);
 }
 
 // this method is called when your extension is deactivated
